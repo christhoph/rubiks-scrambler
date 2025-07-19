@@ -52,6 +52,9 @@ npm run dev
 - `npm run lint` - Check code quality
 - `npm run format` - Format code
 - `npm run check` - Run quality checks
+- `npm run test` - Run tests in watch mode
+- `npm run test:run` - Run tests once
+- `npm run test:coverage` - Run tests with coverage report
 
 ### Technologies
 
@@ -59,6 +62,7 @@ npm run dev
 - **CSS3** - Modular styles with @import
 - **JavaScript ES6+** - Move generation logic
 - **Vite** - Build tool and development server
+- **Vitest** - Unit testing framework
 
 **📚 For detailed development information, coding standards, and troubleshooting, see [DEVELOPMENT.md](./DEVELOPMENT.md)**
 
@@ -72,7 +76,7 @@ Contributions are welcome. To contribute:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-**Note**: This project uses automated code quality tools. All code is automatically linted and formatted before commits via Husky and lint-staged. See [DEVELOPMENT.md](./DEVELOPMENT.md) for detailed development guidelines.
+**Note**: This project uses automated code quality tools. All code is automatically linted, formatted, and tested before commits via Husky and lint-staged. See [DEVELOPMENT.md](./DEVELOPMENT.md) for detailed development guidelines.
 
 ## 📝 License
 
