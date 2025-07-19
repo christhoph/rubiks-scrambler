@@ -1,1 +1,1 @@
-import "./scrambler";
+import './scrambler';

@@ -1,1 +1,1 @@
-import "./renderScramble";
+import './renderScramble';

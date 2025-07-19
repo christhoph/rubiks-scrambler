@@ -1,9 +1,9 @@
-import { generateScramble } from "./generateScramble";
+import { generateScramble } from './generateScramble';
 
 // Reference to the <code> element where the scramble will be displayed
-const $code = document.getElementById("code");
+const $code = document.getElementById('code');
 // Reference to the button that generates a new scramble
-const $newBtn = document.getElementById("new-one");
+const $newBtn = document.getElementById('new-one');
 
 /**
  * Generates a new scramble and updates the page.
@@ -18,6 +18,6 @@ function getCode() {
 getCode();
 
 // Attach click handler to the button to generate a new scramble on demand
-$newBtn.addEventListener("click", function () {
+$newBtn.addEventListener('click', function () {
   getCode();
 });

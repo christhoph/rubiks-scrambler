@@ -1,4 +1,4 @@
-import { movesWithMeta, SCRAMBLE_LENGTH_LIMIT } from "./constants";
+import { movesWithMeta, SCRAMBLE_LENGTH_LIMIT } from './constants';
 
 /**
  * Generates a “valid” Rubik’s Cube scramble of the given length.
@@ -30,5 +30,5 @@ export function generateScramble(length = SCRAMBLE_LENGTH_LIMIT) {
   });
 
   // Join the moves into a single string
-  return rubikCode.join(" ");
+  return rubikCode.join(' ');
 }

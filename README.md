@@ -35,69 +35,32 @@ The algorithm implements the following rules to generate valid sequences:
 
 ## 🛠️ Development
 
-### 🚀 Technologies Used
+### Quick Start
+
+```bash
+git clone <repository-url>
+cd rubiks-scrambler
+npm install
+npm run dev
+```
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Check code quality
+- `npm run format` - Format code
+- `npm run check` - Run quality checks
+
+### Technologies
 
 - **HTML5** - Semantic structure
-- **CSS3** - Modern and responsive styles
+- **CSS3** - Modular styles with @import
 - **JavaScript ES6+** - Move generation logic
 - **Vite** - Build tool and development server
 
-### 📦 Installation
-
-#### Prerequisites
-
-- Node.js v20.9.0 or higher
-- npm (included with Node.js)
-
-#### Installation Steps
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <repository-url>
-   cd rubiks-scrambler
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   - Go to `http://localhost:5173`
-   - Enjoy generating move sequences!
-
-### 🔧 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build the application for production
-- `npm run preview` - Preview the production build
-
-### 📁 Project Structure
-
-```
-rubiks-scrambler/
-├── index.html              # Main page
-├── package.json            # Project configuration
-├── src/
-│   ├── main.js             # Application entry point
-│   ├── modules/
-│   │   ├── index.js        # Module exports
-│   │   └── scrambler/
-│   │       ├── index.js    # Scrambler exports
-│   │       ├── constants.js # Constants and configuration
-│   │       ├── generateScramble.js # Generation logic
-│   │       └── renderScramble.js   # DOM rendering
-│   └── styles/             # CSS style files
-└── public/                 # Static files
-```
+**📚 For detailed development information, coding standards, and troubleshooting, see [DEVELOPMENT.md](./DEVELOPMENT.md)**
 
 ### 🤝 Contributing
 
@@ -108,6 +71,8 @@ Contributions are welcome. To contribute:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+**Note**: This project uses automated code quality tools. All code is automatically linted and formatted before commits via Husky and lint-staged. See [DEVELOPMENT.md](./DEVELOPMENT.md) for detailed development guidelines.
 
 ## 📝 License
 
