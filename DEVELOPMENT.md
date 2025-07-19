@@ -49,9 +49,12 @@ npm install
 
 ### Husky
 
-- **Configuration**: `.husky/pre-commit`
+- **Configuration**: `.husky/`
 - **Purpose**: Git hooks for automated quality checks
-- **Integration**: Runs lint-staged before each commit
+- **Hooks**:
+  - **pre-commit**: Runs lint-staged on staged files (fast, incremental)
+  - **pre-push**: Runs comprehensive checks on entire project
+- **Integration**: Automatically runs before commits and pushes
 
 ### lint-staged
 
@@ -78,10 +81,12 @@ rubiks-scrambler/
 │       ├── layout.css          # Layout and structure styles
 │       └── scrambler.css       # Component-specific styles
 ├── public/                     # Static assets
+├── .husky/                     # Git hooks
+│   ├── pre-commit             # Runs lint-staged on staged files
+│   └── pre-push               # Runs comprehensive checks
 ├── eslint.config.js            # ESLint configuration
 ├── .prettierrc                 # Prettier configuration
 ├── .prettierignore             # Prettier ignore patterns
-├── .husky/                     # Git hooks
 └── package.json                # Project configuration
 ```
 
@@ -144,10 +149,28 @@ import './styles/main.css';
 2. Make your changes
 3. Stage your files (`git add .`)
 4. Commit your changes (`git commit -m "message"`)
-5. Push to your branch
+5. Push to your branch (`git push origin feature/AmazingFeature`)
 6. Create a Pull Request
 
 ## 🔍 Quality Assurance
+
+### Git Hooks
+
+The project uses two Git hooks to ensure code quality:
+
+#### Pre-commit Hook
+
+- **Trigger**: Before each commit
+- **Action**: Runs `npx lint-staged`
+- **Purpose**: Fast, incremental checks on staged files only
+- **Benefits**: Quick commits, automatic fixes
+
+#### Pre-push Hook
+
+- **Trigger**: Before pushing to remote
+- **Action**: Runs `npm run check`
+- **Purpose**: Comprehensive checks on entire project
+- **Benefits**: Ensures overall code quality before sharing
 
 ### Before Committing
 
@@ -189,6 +212,12 @@ If pre-commit hooks aren't working:
 1. Ensure Husky is properly installed: `npm run prepare`
 2. Check that the `.husky/pre-commit` file is executable
 3. Verify lint-staged configuration in `package.json`
+
+If pre-push hooks aren't working:
+
+1. Check that the `.husky/pre-push` file is executable
+2. Verify that `npm run check` works manually
+3. Ensure all dependencies are installed
 
 ### CSS Issues
 

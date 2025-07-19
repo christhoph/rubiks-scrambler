@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Pre-push hook: Run comprehensive checks before pushing
+npm run check 
